@@ -201,7 +201,7 @@ const AIContentPlatform = () => {
     }
   ];
 
-  const categories: string[] = ['All', 'Visual', 'Video', 'Text', 'Edit', 'Live', 'ML'];
+  const categories: string[] = ['All', 'Visual', 'Video', 'Text', 'Edit', 'Live'];
 
   // Filter generators based on search and category
   const filteredGenerators = generators.filter(gen => {
@@ -221,10 +221,8 @@ const AIContentPlatform = () => {
 
   const handleGeneratorClick = (generatorId: string) => {
     setIsLoading(true);
-    // Simulate loading
     setTimeout(() => {
       setIsLoading(false);
-      // In a real app, this would navigate to the generator
     }, 1500);
   };
 
@@ -240,7 +238,7 @@ const AIContentPlatform = () => {
         </div>
       )}
 
-      {/* Navigation with enhanced animations */}
+      {/* Navigation */}
       <nav className={`${darkMode ? 'bg-gray-800/80 border-gray-700' : 'bg-white/80 border-gray-200'} border-b backdrop-blur-md sticky top-0 z-40 transition-all duration-300`}>
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -286,6 +284,15 @@ const AIContentPlatform = () => {
                 <Image className="w-5 h-5" />
                 <span className="hidden md:inline font-medium">Gallery</span>
               </button>
+                <button
+                onClick={() => setDarkMode(!darkMode)}
+                className={`p-2 rounded-lg transition-all duration-200 hover:scale-105 ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+              >
+                <div className="relative w-5 h-5">
+                  <Sun className={`absolute inset-0 transition-all duration-300 ${darkMode ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'}`} />
+                  <Moon className={`absolute inset-0 transition-all duration-300 ${darkMode ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'}`} />
+                </div>
+              </button>
               
               <button className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>
                 <Star className="w-5 h-5" />
@@ -301,15 +308,6 @@ const AIContentPlatform = () => {
                 )}
               </button>
               
-              <button
-                onClick={() => setDarkMode(!darkMode)}
-                className={`p-2 rounded-lg transition-all duration-200 hover:scale-105 ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
-              >
-                <div className="relative w-5 h-5">
-                  <Sun className={`absolute inset-0 transition-all duration-300 ${darkMode ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'}`} />
-                  <Moon className={`absolute inset-0 transition-all duration-300 ${darkMode ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'}`} />
-                </div>
-              </button>
             </div>
           </div>
         </div>
@@ -333,7 +331,6 @@ const AIContentPlatform = () => {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
-        {/* Featured Models Section with enhanced animations */}
         <div className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredModels.map((model, index) => (
@@ -424,7 +421,7 @@ const AIContentPlatform = () => {
             </button>
           </div>
           
-          {/* Category Pills with smooth animation */}
+          {/* Category Pills */}
           <div className={`flex flex-wrap gap-2 mb-6 transition-all duration-500 overflow-hidden ${
             showFilters ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
           }`}>
@@ -446,7 +443,7 @@ const AIContentPlatform = () => {
           </div>
         </div>
 
-        {/* Enhanced Generators Grid */}
+        {/* Generators Grid */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {filteredGenerators.map((generator, index) => (
@@ -502,7 +499,7 @@ const AIContentPlatform = () => {
           )}
         </div>
 
-        {/* Enhanced Gallery Section */}
+        {/*Gallery Section */}
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-2xl font-bold">Gallery</h3>
@@ -565,11 +562,11 @@ const AIContentPlatform = () => {
         </div>
       </main>
 
-      {/* Enhanced Footer */}
+      {/* Footer */}
         <footer className={`${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border-t py-8`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
-            {/* Left side - Krea AI branding */}
+            {/* Left side  */}
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded flex items-center justify-center hover:scale-110 transition-transform duration-200">
                 <span className="text-white text-xs font-bold">K</span>
@@ -577,7 +574,7 @@ const AIContentPlatform = () => {
               <span className="font-semibold">Krea AI</span>
             </div>
             
-            {/* Right side - Curated by Mobbin */}
+            {/* Right side */}
             <div className="flex items-center gap-2">
               <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                 curated by
