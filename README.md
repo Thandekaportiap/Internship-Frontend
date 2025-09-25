@@ -9,11 +9,7 @@ Clone the project
 ```
 Go to the project directory
 ```bash
-  cd Shopping-List
-```
-Font-End
-```bash
-  cd client
+  cd Internship-Frontend
 ```
 Install dependencies
 ```bash
@@ -23,14 +19,7 @@ Start the react server
 ```bash
   npm run dev
 ```
-Back-End
-```bash
-  cd server
-```
-Start the react server
-```bash
-  npm start
-```
+
 ## Tech Stack
-**Client:** React JS, HTML5, JavaScript, CSS3, Tailwind CSS, Redux<br/>
-**Server:** JSON-Server.
+**Client:** Next JS, HTML5, JavaScript, CSS3, Tailwind CSS <br/>
+
