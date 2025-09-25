@@ -1,3 +1,5 @@
+<img src="https://socialify.git.ci/Thandekaportiap/Internship-Frontend/image?language=1&name=1&owner=1&pattern=Circuit+Board&stargazers=1&theme=Dark" alt="Internship-Frontend" width="640" height="320" />
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
